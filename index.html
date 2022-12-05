@@ -9,8 +9,6 @@
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
         <link rel="icon" href="favicon/favicon.ico" type="image/x-icon">
-        <link rel="stylesheet" type="text/css" href="../css_main.css">
-        <link rel="stylesheet" type="text/css" href="css_about.css">
         <script src="src/ascii-progress.js"></script>
         <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
         <style>
@@ -50,28 +48,27 @@
             }
             </style>
             <script>
-                window.onload = function(){
-                    setTimeout(() => {  document.getElementById("aaac").style.visibility = "visible"; }, 100);
-                    setTimeout(() => {  document.getElementById("aaad").style.visibility = "visible"; }, 150);
-                    setTimeout(() => {  document.getElementById("aaae").style.visibility = "visible"; }, 200);
-                    setTimeout(() => {  document.getElementById("aaae1").style.visibility = "visible"; }, 400);
-                    setTimeout(() => {  document.getElementById("aaaf").style.visibility = "visible"; }, 500);
-                    setTimeout(() => {  document.getElementById("aaag").style.visibility = "visible"; }, 600);
-                    setTimeout(() => {  document.getElementById("aaah").style.visibility = "visible"; }, 675);
-                    setTimeout(() => {  
-                        var progressBar = new AsciiProgress("progressbar",{
-                            openCharacter: "",
-                            loadedCharacter: ".",
-                            backgroundCharacter: " ",
-                            closeCharacter: "",
-                            length: 50,
-                            value: 100,
-                            completeAt: 100,
-                            showPercent: false,
-                            showComment: false,
-                            });
-                        progressbar.setValue(10);
-                    }, 750);
+                window.onload = function(){  
+                    var progressBar = new AsciiProgress("progressbar",{
+                        openCharacter: "",
+                        loadedCharacter: ".",
+                        backgroundCharacter: " ",
+                        closeCharacter: "",
+                        length: 50,
+                        value: 100,
+                        completeAt: 100,
+                        showPercent: true,
+                        showComment: false,
+                        });
+                        progressBar.setValue(0);
+                    setTimeout(() => {  document.getElementById("aaac").style.visibility = "visible"; progressBar.setValue(10); }, 100);
+                    setTimeout(() => {  document.getElementById("aaad").style.visibility = "visible"; progressBar.setValue(13); }, 150);
+                    setTimeout(() => {  document.getElementById("aaae").style.visibility = "visible"; progressBar.setValue(24); }, 200);
+                    setTimeout(() => {  document.getElementById("aaae1").style.visibility = "visible"; progressBar.setValue(50); }, 400);
+                    setTimeout(() => {  document.getElementById("aaaf").style.visibility = "visible"; progressBar.setValue(78); }, 500);
+                    setTimeout(() => {  document.getElementById("aaag").style.visibility = "visible"; progressBar.setValue(100); }, 600);
+                    // setTimeout(() => {  document.getElementById("aaah").style.visibility = "visible"; }, 675);
+                    
                 }
                 
     
