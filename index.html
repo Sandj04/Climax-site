@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>De Climax | Contact</title>
+        <meta name="description" content="Contact page for the Climax site">
+        <meta name="author" content="Sander Murray">
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+        <link rel="icon" href="favicon/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" type="text/css" href="../css_main.css">
+        <link rel="stylesheet" type="text/css" href="css_about.css">
+        <script src="src/ascii-progress.js"></script>
+        <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+        <style>
+            @font-face {
+                font-family: '8x16_asciiregular';
+                src: url('/8x16-ascii-webfont.woff2') format('woff2'),
+                    url('/8x16-ascii-webfont.woff') format('woff');
+                Font-weight: normal;
+                font-style: normal;
+                }
+
+            body {
+                background-color: black;
+            }
+            #frame {
+                font-family: '8x16_asciiregular', Arial, sans-serif;
+                font-weight:normal;
+                font-style:normal;
+                font-size: 18px;
+                color: #FFFFFF;
+                }
+            #aaaa {
+                margin-top: 13px;
+                margin-bottom: 13px;
+                font-size: 53px;
+            }
+            #aaab {
+                margin-bottom: 40px;
+            }
+            #aaac {
+                color: #00FF00;
+                margin: 1px 0px;
+            }
+            #aaad, #aaae, #aaaf, #aaag {
+                color: #5155ff;
+                margin: 1px 0px;
+            }
+            </style>
+            <script>
+                window.onload = function(){
+                    setTimeout(() => {  document.getElementById("aaac").style.visibility = "visible"; }, 100);
+                    setTimeout(() => {  document.getElementById("aaad").style.visibility = "visible"; }, 150);
+                    setTimeout(() => {  document.getElementById("aaae").style.visibility = "visible"; }, 200);
+                    setTimeout(() => {  document.getElementById("aaae1").style.visibility = "visible"; }, 400);
+                    setTimeout(() => {  document.getElementById("aaaf").style.visibility = "visible"; }, 500);
+                    setTimeout(() => {  document.getElementById("aaag").style.visibility = "visible"; }, 600);
+                    setTimeout(() => {  document.getElementById("aaah").style.visibility = "visible"; }, 675);
+                    setTimeout(() => {  
+                        var progressBar = new AsciiProgress("progressbar",{
+                            openCharacter: "",
+                            loadedCharacter: ".",
+                            backgroundCharacter: " ",
+                            closeCharacter: "",
+                            length: 50,
+                            value: 100,
+                            completeAt: 100,
+                            showPercent: false,
+                            showComment: false,
+                            });
+                        progressbar.setValue(10);
+                    }, 750);
+                }
+                
+    
+            </script>
+    </head>
+
+    <body>
+        <div id="frame">
+            <div id="header">
+                <p id="aaaa">De Climax</p>
+                <p id="aaab">Welcome to the Climax contact page!</p>
+            </div>
+            <div id="startuptext" style="visibility:hidden">
+                <p id="aaac">Running Linux Kernel<span style="color: #FFFF00;"> 2.6.24.4</span>.</p>
+                <p id="aaad">Total Memory available:<span style="color: #FFFF00;"> 1245132kB</span>, Memory free:<span style="color: #FFFF00;"> 118180kB</span>.</p>
+                <p id="aaae">Scanning for USB/Firmware devices... <span id="aaae1" style="visibility:hidden">Done.</span></p><!--animation-->
+                <p id="aaaf">Establishing secure SSL connection at <span style="color: #FFFF00;">156.154.65.107</span> ...</p>
+                <p id="aaag"><span style="color: #00FF00">TLS handshake successful!</span></p>
+                <div id="progressbar"style="visibility:visible"></div>
+
+            </div>
+            <div id="interface">
+
+            </div>
+        </div>
+    </body>
+</html>
