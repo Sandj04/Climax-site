@@ -46,6 +46,10 @@
                 color: #5155ff;
                 margin: 1px 0px;
             }
+
+            #poster {
+                height: 75vw;
+            }
             </style>
             <script>
                 window.onload = function(){  
@@ -67,7 +71,12 @@
                     setTimeout(() => {  document.getElementById("aaae1").style.visibility = "visible"; progressBar.setValue(50); }, 400);
                     setTimeout(() => {  document.getElementById("aaaf").style.visibility = "visible"; progressBar.setValue(78); }, 500);
                     setTimeout(() => {  document.getElementById("aaag").style.visibility = "visible"; progressBar.setValue(100); }, 600);
-                    // setTimeout(() => {  document.getElementById("aaah").style.visibility = "visible"; }, 675);
+                    setTimeout(() => {  document.getElementById("aaac").style.visibility = "hidden"; 
+                    document.getElementById("aaac").style.visibility = "hidden"; document.getElementById("aaad").style.visibility = "hidden";
+                    document.getElementById("aaae").style.visibility = "hidden"; document.getElementById("aaae1").style.visibility = "hidden"; 
+                    document.getElementById("aaaf").style.visibility = "hidden"; document.getElementById("aaag").style.visibility = "hidden";
+                    document.getElementById("progressbar").style.visibility = "hidden"; document.getElementById("startuptext").style.height = "0"; 
+                    document.getElementById("main").style.visibility = "visible"; }, 850);
                     
                 }
                 
@@ -79,7 +88,7 @@
         <div id="frame">
             <div id="header">
                 <p id="aaaa">De Climax</p>
-                <p id="aaab">Welcome to the Climax contact page!</p>
+                <p id="aaab">Welcome to the Bussumse Lyceum Bond info page!</p>
             </div>
             <div id="startuptext" style="visibility:hidden">
                 <p id="aaac">Running Linux Kernel<span style="color: #FFFF00;"> 2.6.24.4</span>.</p>
@@ -90,8 +99,9 @@
                 <div id="progressbar"style="visibility:visible"></div>
 
             </div>
-            <div id="interface">
-
+            <div id="main" style="visibility:hidden">
+                <p>Volgende evenement:</p>
+                <img id="poster" src="/src/img/wwl22.jpg">
             </div>
         </div>
     </body>
